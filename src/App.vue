@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <app-header />
     <router-view/>
   </div>
 </template>
@@ -13,7 +10,7 @@
 @import "src/assets/style/foundation-sites/scss/foundation";
 @include foundation-everything;
 
-@include foundation-xy-grid-classes(
+// @include foundation-xy-grid-classes(
   /* options
   $base-grid: true,
   $margin-grid: true,
@@ -24,9 +21,22 @@
   $vertical-grid: true,
   $frame-grid: true
   */
-);
+// );
 
 // body {
 //   font-size: $titlebar-icon-spacing;
 // }
 </style>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import AppHeader from '@/components/header/Header.vue';
+
+@Component({
+  components: {
+    AppHeader,
+  },
+})
+
+export default class Home extends Vue {}
+</script>

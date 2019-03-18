@@ -2,6 +2,19 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    browser: true,
+  },
+  "settings": {
+    "import/resolver": {
+      "import/extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".ts",
+        ".tsx",
+        ".vue"
+      ]
+    }
   },
   extends: [
     'plugin:vue/essential',
