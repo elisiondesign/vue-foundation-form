@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  baseUrl: '/',
+  publicPath: '/',
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json'],

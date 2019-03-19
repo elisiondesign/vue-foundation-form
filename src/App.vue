@@ -31,6 +31,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import AppHeader from '@/components/header/Header.vue';
+import AppTitle from '@/components/Title.vue';
 
 @Component({
   components: {
