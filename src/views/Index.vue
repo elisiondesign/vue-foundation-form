@@ -4,7 +4,10 @@
     <div class="page">
       <div class="grid-container">
         <h2>Formular</h2>
-        <form class="form" @submit="handleSubmit">
+        <form
+          class="form"
+          @submit="handleSubmit"
+        >
           <h3>Formular</h3>
           <div>
             Vzorovy button <br>
@@ -12,13 +15,33 @@
           </div>
 
           <label for="firstName">Jméno</label>
-          <input id="firstName" type="text" v-model="data.firstName"/>
-          <label for="lastName">Příjmení</label>
-          <input id="lastName" type="text" v-model="data.lastName"/>
+          <input
+            id="firstName"
+            type="text"
+            v-model="data.firstName"
+          />
+          <label for="surname">Příjmení</label>
+          <input
+            id="surname"
+            type="text"
+            v-model="data.surname"
+          />
 
-          <input id="male" type="radio" name="gender" value="male" v-model="data.gender"/>
+          <input
+            id="male"
+            type="radio"
+            name="gender"
+            value="male"
+            v-model="data.gender"
+          />
           <label for="male">Muz</label>
-          <input id="female" type="radio" name="gender" value="female" v-model="data.gender"/>
+          <input
+            id="female"
+            type="radio"
+            name="gender"
+            value="female"
+            v-model="data.gender"
+          />
           <label for="female">Zena</label>
 
           <button type="submit">Pokračovat</button>
@@ -26,17 +49,20 @@
           <p v-if="errors.length">
             <b>Vyplňte prosím následující položky</b>
             <ul>
-              <li v-for="error in errors" :key="error">{{ error }}</li>
+              <li
+                v-for="error in errors"
+                :key="error"
+              >{{ error }}</li>
             </ul>
           </p>
         </form>
-        </div>
+      </div>
 
-        <div class="grid-container">
-          <overview />
-        </div>
+      <div class="grid-container">
+        <overview />
       </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -46,9 +72,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import AppTitle from '@/components/Title.vue';
 import Overview from '@/components/users-overview/Overview.vue';
-import {
-  Action,
-} from 'vuex-class';
+import { Action } from 'vuex-class';
 
 const namespace: string = 'users';
 
@@ -65,10 +89,9 @@ export default class Home extends Vue {
 
   private data = {
     firstName: null,
-    lastName: null,
+    surname: null,
     gender: null,
   };
-
 
   private handleSubmit(e: any): void {
     this.checkForm();
@@ -85,7 +108,7 @@ export default class Home extends Vue {
     if (!this.data.firstName) {
       this.errors.push('Jméno');
     }
-    if (!this.data.lastName) {
+    if (!this.data.surname) {
       this.errors.push('Příjmení');
     }
     if (!this.data.gender) {
@@ -95,7 +118,7 @@ export default class Home extends Vue {
 
   private clearForm() {
     this.data.firstName = null;
-    this.data.lastName = null;
+    this.data.surname = null;
     this.data.gender = null;
   }
 }

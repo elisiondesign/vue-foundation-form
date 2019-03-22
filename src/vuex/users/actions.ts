@@ -1,12 +1,19 @@
-export default {
-  addEntry({ commit }: any, entry: any) {
-    const today = new Date();
-    const dd = today.getDate();
-    const mm = today.getMonth() + 1; // January is 0!
-    const yyyy = today.getFullYear();
+import { User } from '@/types/vuex/users';
 
-    const entryWithDate = { ...entry, date: `${dd}. ${mm}. ${yyyy}` };
+export default {
+  addEntry({ commit }: any, entry: User) {
+    const date = new Date().toLocaleDateString('cs');
+    const entryWithDate: User = { ...entry, date };
 
     commit('ADD_ENTRY', entryWithDate);
+  },
+
+  addEntriesFromJSON({ commit }: any, entries: User[]) {
+    entries.forEach((entry) => {
+      const date = new Date(entry.date).toLocaleDateString('cs');
+      const entryWithDate: User = { ...entry, date };
+
+      commit('ADD_ENTRY', entryWithDate);
+    });
   },
 };

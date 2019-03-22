@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-header />
-    <router-view class="site-content"/>
+    <router-view class="site-content" />
     <app-footer />
   </div>
 </template>
@@ -22,6 +22,5 @@ import AppFooter from '@/components//footer/Footer.vue';
     AppFooter,
   },
 })
-
 export default class Home extends Vue {}
 </script>

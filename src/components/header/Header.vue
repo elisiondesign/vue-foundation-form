@@ -1,26 +1,26 @@
 <template>
-    <header class="grid-x top-bar header">
-      <div class="cell large-4">logo</div>
-      <main-menu class="cell large-4"/>
-      <label-value-item class="cell large-2">
-        <template v-slot:label>
-          Label
-        </template>
+  <header class="grid-x top-bar header">
+    <div class="cell large-4">logo</div>
+    <main-menu class="cell large-4" />
+    <label-value-item class="cell large-2">
+      <template v-slot:label>
+        Label
+      </template>
 
-        <template v-slot:value>
-          Value
-        </template>
-      </label-value-item>
-      <drop-down-item class="cell large-2">
-        <template v-slot:label>
-          Label
-        </template>
+      <template v-slot:value>
+        Value
+      </template>
+    </label-value-item>
+    <drop-down-item class="cell large-2">
+      <template v-slot:label>
+        Label
+      </template>
 
-        <template v-slot:content>
-          Value
-        </template>
-      </drop-down-item>
-    </header>
+      <template v-slot:content>
+        Value
+      </template>
+    </drop-down-item>
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -41,6 +41,5 @@ import LabelValueItem from '@/components/header/LabelValueItem.vue';
     LabelValueItem,
   },
 })
-
 export default class Header extends Vue {}
 </script>
