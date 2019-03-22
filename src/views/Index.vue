@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <app-title>Testovací zadání</app-title>
     <div class="page">
       <div class="grid-container">
@@ -30,11 +30,13 @@
             </ul>
           </p>
         </form>
+        </div>
 
-        <overview />
+        <div class="grid-container">
+          <overview />
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style lang="scss">
@@ -57,7 +59,9 @@ const namespace: string = 'users';
   },
 })
 export default class Home extends Vue {
-private errors : string[] = [];
+  @Action('addEntry', { namespace }) private addEntry: any;
+
+  private errors: string[] = [];
 
   private data = {
     firstName: null,
@@ -65,9 +69,8 @@ private errors : string[] = [];
     gender: null,
   };
 
-  @Action('addEntry', { namespace }) addEntry : any;
 
-  private handleSubmit(e : any) : void {
+  private handleSubmit(e: any): void {
     this.checkForm();
     if (this.errors.length === 0) {
       this.addEntry(this.data);

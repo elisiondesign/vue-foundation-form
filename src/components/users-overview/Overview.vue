@@ -24,6 +24,6 @@ import {
   },
 })
 export default class Overview extends Vue {
-  @State('users') users : any;
+  @State('users') private users: any;
 }
 </script>

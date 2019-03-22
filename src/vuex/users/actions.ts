@@ -1,5 +1,5 @@
 export default {
-  addEntry({ commit } : any, entry : any) {
+  addEntry({ commit }: any, entry: any) {
     const today = new Date();
     const dd = today.getDate();
     const mm = today.getMonth() + 1; // January is 0!

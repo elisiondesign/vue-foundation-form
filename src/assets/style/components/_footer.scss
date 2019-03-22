@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    color: $white;
+    height: 100px;
+    padding: 0 $global-padding*5;
+
+    &__logo {
+        flex: 20;
+    }
+
+    &__lang-switcher {
+        flex: 1;
+    }
+
+    &__social-links {
+        flex: 2;
+    }
+
+    &__item {
+        fleX: 1;
+    }
+
+    background-color: $dark-blue;
+}

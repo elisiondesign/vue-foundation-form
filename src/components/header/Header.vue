@@ -1,5 +1,5 @@
 <template>
-    <header class="grid-x grid-margin-x top-bar">
+    <header class="grid-x top-bar header">
       <div class="cell large-4">logo</div>
       <main-menu class="cell large-4"/>
       <label-value-item class="cell large-2">
@@ -22,6 +22,11 @@
       </drop-down-item>
     </header>
 </template>
+
+<style lang="scss" scoped>
+@import "src/assets/style/components/header";
+</style>
+
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
