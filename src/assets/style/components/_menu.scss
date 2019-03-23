@@ -1,0 +1,8 @@
+.menu {
+    padding-right: $global-padding;
+    display: flex;
+    justify-content: flex-end;
+    
+    border-right: $hr-border;
+    font-weight: $global-weight-bold;    
+}
