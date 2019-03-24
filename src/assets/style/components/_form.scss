@@ -1,10 +1,10 @@
 .form {
     padding: $global-padding*2;
+    margin-bottom: $global-padding*2;
+    
     background-color: $white;
     box-shadow: $large-shadow;
     border-radius: $global-radius;
-
-    font-size: $medium-font-size;
 
     &__note{
         display: block;
@@ -15,11 +15,11 @@
 
     &__title{
         text-transform: uppercase;
-        font-size: $medium-font-size;
+        font-size: $global-font-size;
     }
     
     &__subtitle{
-        font-size: $medium-font-size;
+        font-size: $global-font-size;
     }
 
     &__description{
@@ -40,7 +40,8 @@
     }
     
     &__label{
-        font-family: 'Ubuntu Medium', sans-serif;
+        font-family: 'Ubuntu', sans-serif;        
+        font-weight: 500;
     }
 
     &__submit{

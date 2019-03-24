@@ -1,0 +1,33 @@
+.table{
+    margin: 0;
+    border-radius: 0;
+
+    tr{
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover{
+            background-color: $light-gray;
+        }
+    }
+    
+    td{
+        padding: $global-padding/2;
+    }
+
+    &__first{
+        color: $dark-gray;
+        padding-left: $global-padding*2!important;
+        max-width: 80px;
+        font-family: 'Ubuntu Medium', sans-serif;
+    }
+
+    &__cell{
+        font-weight: $global-weight-bold;
+    }
+
+    &__last{          
+        max-width: 80px;
+        text-align: right;
+        padding-right: $global-padding*2!important;
+    }
+}

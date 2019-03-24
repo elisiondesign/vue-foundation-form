@@ -1,0 +1,14 @@
+.overview {
+    margin-bottom: $global-padding*2;
+
+    background-color: $white;
+    border-radius: $global-radius;
+    overflow: hidden;
+
+    &__title{
+        text-transform: uppercase;
+        font-size: $global-font-size;
+        padding: $global-padding*2;
+        margin: 0;
+    }
+}
