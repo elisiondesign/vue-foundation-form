@@ -1,7 +1,7 @@
 <template>
   <div class="wallet">
     <div class="wallet__icon">
-      <font-awesome-icon :icon="icon" />
+      <fa-wallet/>
     </div>
     <div class="wallet__text">
       <span class="wallet__label">
@@ -22,15 +22,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faWallet } from '@fortawesome/free-solid-svg-icons';
+import faWallet from '@/components/fa-icons/Wallet.vue';
 
 @Component({
   components: {
-    FontAwesomeIcon,
+    faWallet,
   },
 })
-export default class Wallet extends Vue {
-  private icon = faWallet;
-}
+export default class Wallet extends Vue {}
 </script>
