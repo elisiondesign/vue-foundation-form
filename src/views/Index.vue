@@ -32,6 +32,9 @@ import UserForm from '@/components/users/Form.vue';
     Overview,
     UserForm,
   },
+  metaInfo: {
+    title: 'Users',
+  },
 })
 export default class Home extends Vue {}
 </script>

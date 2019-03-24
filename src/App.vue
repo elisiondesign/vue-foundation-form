@@ -21,6 +21,10 @@ import AppFooter from '@/components//footer/Footer.vue';
     AppHeader,
     AppFooter,
   },
+  metaInfo: {
+    title: 'Home',
+    titleTemplate: '%s | Elision Design',
+  },
 })
 export default class Home extends Vue {}
 </script>
