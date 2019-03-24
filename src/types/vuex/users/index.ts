@@ -5,4 +5,8 @@ export interface User {
   date: string;
 }
 
-export interface Test { data: string; }
+export interface UserDate {
+  year: string;
+  month: string;
+  day: string;
+}
