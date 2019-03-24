@@ -27,6 +27,13 @@
 
     &__help{
         display: block;
+        text-align: left;
+        color: $dark-gray;
         padding-left: $global-padding;
+
+        svg{
+            height: 24px;
+            width: 24px;
+        }
     }
 }
