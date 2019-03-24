@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     color: $white;
-    height: 100px;
+    // height: $footer-height;
     padding: 0 $global-padding*5;
 
     &__logo {
