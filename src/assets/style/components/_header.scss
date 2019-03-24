@@ -1,4 +1,5 @@
 .header {
+    height: $header-height;
     box-shadow: $box-shadow;
     padding: 0 $global-padding*2;
 
@@ -6,9 +7,23 @@
         padding: 0 $global-padding*5;
     }
 
-    &__logo{
+    &__logo{    
+        display: flex;
+        align-items: center;
+
         text-transform: uppercase;
-        font-size: 31px;
         font-weight: $global-weight-bold;  
+        font-size: 31px;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        height: $header-height;
+        border-right: $hr-border;
+    }
+
+    &__help{
+        padding-left: $global-padding;
     }
 }

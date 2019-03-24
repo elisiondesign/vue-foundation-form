@@ -1,10 +1,11 @@
 .menu {
+    height: $header-height;
     padding-right: $global-padding;
+
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    
-    border-right: $hr-border;
-    
+        
     &__link{
         color: $dark-blue;
     }

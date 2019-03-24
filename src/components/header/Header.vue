@@ -1,25 +1,24 @@
 <template>
   <header class="grid-x top-bar header">
-    <div class="header__logo cell medium-1 xlarge-4">logo</div>
-    <main-menu class="cell medium-5 xlarge-4" />
-    <label-value-item class="cell medium-3 xlarge-2">
+    <div class="header__logo cell medium-1">logo</div>
+    <main-menu class="cell medium-6 header__item" />
+    <label-value-item class="cell medium-2 header__item">
       <template v-slot:label>
-        Label
+        Label itemu
       </template>
-
       <template v-slot:value>
-        Value
+        Value itemu
       </template>
     </label-value-item>
-    <drop-down-item class="cell medium-3 xlarge-2">
+    <drop-down-item class="cell medium-2 header__item">
       <template v-slot:label>
         Label
       </template>
-
       <template v-slot:content>
         Value
       </template>
     </drop-down-item>
+    <div class="cell medium-1 header__help">?</div>
   </header>
 </template>
 

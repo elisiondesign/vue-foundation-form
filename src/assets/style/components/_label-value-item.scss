@@ -1,0 +1,19 @@
+.label-value-item{
+    display: flex;
+    flex-direction: row;
+    padding: 0 $global-padding;
+
+    @include breakpoint(xxlarge) {
+        padding: 0 $global-padding*2;
+    }
+
+    &__text{
+        padding-left: $global-padding
+    }
+
+    &__value{
+        display: block;
+        font-weight: $global-weight-bold;
+        line-height: $global-font-size;
+    }
+}

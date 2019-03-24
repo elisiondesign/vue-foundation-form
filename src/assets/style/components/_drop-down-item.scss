@@ -1,0 +1,22 @@
+.drop-down-item{
+    display: flex;
+    flex-direction: row;
+    padding: 3px $global-padding 0 $global-padding;
+
+    background-color: $light-grey;
+    border-bottom: 3px solid $light-grey;
+    transition: border-color 0.3s ease-in-out;
+    
+    @include breakpoint(xxlarge) {
+        padding: 3px $global-padding*2 0 $global-padding*2;
+    }
+
+    &:hover{
+        border-bottom: 3px solid $light-blue;
+    }
+
+    &__text{
+        padding-left: $global-padding;
+        font-weight: $global-weight-bold;
+    }
+}
