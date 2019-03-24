@@ -14,47 +14,45 @@
             Rozsireny label radio buttonu, ktery muze byt delsi
           </div>
 
-          <label for="firstName">Jméno</label>
-          <input
-            id="firstName"
-            type="text"
-            v-model="data.firstName"
-          />
-          <label for="surname">Příjmení</label>
-          <input
-            id="surname"
-            type="text"
-            v-model="data.surname"
-          />
+          <label class="form__label">Jméno
+            <input
+              name="firstName"
+              type="text"
+              v-model="data.firstName"
+              v-validate="'required|alpha'"
+            />
+          </label>
+          <label class="form__label">Příjmení
+            <input
+              id="surname"
+              name="surname"
+              type="text"
+              v-model="data.surname"
+              v-validate="'required|alpha'"
+            />
+          </label>
 
-          <input
-            id="male"
-            type="radio"
-            name="gender"
-            value="male"
-            v-model="data.gender"
-          />
-          <label for="male">Muz</label>
-          <input
-            id="female"
-            type="radio"
-            name="gender"
-            value="female"
-            v-model="data.gender"
-          />
-          <label for="female">Zena</label>
+          <label class="form__label">
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              v-model="data.gender"
+            /> Muz
+          </label>
+          <label class="form__label">
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              v-model="data.gender"
+            /> Zena
+          </label>
 
           <button type="submit">Pokračovat</button>
 
-          <p v-if="errors.length">
-            <b>Vyplňte prosím následující položky</b>
-            <ul>
-              <li
-                v-for="error in errors"
-                :key="error"
-              >{{ error }}</li>
-            </ul>
-          </p>
+          <div v-if="errors.has('gender')">Pohlaví je povinná položka</div>
+
         </form>
       </div>
 
@@ -66,6 +64,8 @@
 </template>
 
 <style lang="scss">
+@import "src/assets/style/external-libraries/vee-validate";
+@import "src/assets/style/components/form";
 </style>
 
 <script lang="ts">
@@ -85,41 +85,26 @@ const namespace: string = 'users';
 export default class Home extends Vue {
   @Action('addEntry', { namespace }) private addEntry: any;
 
-  private errors: string[] = [];
-
-  private data = {
+  private defaultData = {
     firstName: null,
     surname: null,
-    gender: null,
+    gender: 'male',
   };
 
+  private data = Object.assign({}, this.defaultData);
+
   private handleSubmit(e: any): void {
-    this.checkForm();
-    if (this.errors.length === 0) {
-      this.addEntry(this.data);
-      this.clearForm();
-    }
+    this.$validator.validate().then((valid) => {
+      if (valid) {
+        this.addEntry(this.data);
+      }
+    });
+
     e.preventDefault();
   }
 
-  private checkForm(): void {
-    this.errors = [];
-
-    if (!this.data.firstName) {
-      this.errors.push('Jméno');
-    }
-    if (!this.data.surname) {
-      this.errors.push('Příjmení');
-    }
-    if (!this.data.gender) {
-      this.errors.push('Pohlaví');
-    }
-  }
-
   private clearForm() {
-    this.data.firstName = null;
-    this.data.surname = null;
-    this.data.gender = null;
+    Object.assign({}, this.defaultData);
   }
 }
 </script>
