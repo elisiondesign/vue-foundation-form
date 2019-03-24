@@ -1,6 +1,6 @@
 <template>
   <header class="grid-x top-bar header">
-    <div class="cell medium-1 xlarge-4">logo</div>
+    <div class="header__logo cell medium-1 xlarge-4">logo</div>
     <main-menu class="cell medium-5 xlarge-4" />
     <label-value-item class="cell medium-3 xlarge-2">
       <template v-slot:label>
