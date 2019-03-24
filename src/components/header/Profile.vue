@@ -9,7 +9,7 @@
         <slot name="content" />
       </div>
     </div>
-    <fa-chevron-down/>
+    <fa-chevron-down class="profile__arrow" />
   </div>
 </template>
 
