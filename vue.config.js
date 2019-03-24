@@ -21,6 +21,7 @@ module.exports = {
           @import "~@/assets/style/_variables.scss";
           @import "~@/assets/style/foundation-sites/settings";
           @import "~@/assets/style/foundation-sites/scss/foundation";
+          @import url("@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');");
           @import url("@import url('https://fonts.googleapis.com/css?family=Ubuntu:500');");
         `,
       },

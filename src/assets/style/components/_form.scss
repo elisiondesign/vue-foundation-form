@@ -9,6 +9,7 @@
     &__note{
         display: block;
         color: $white;
+        font-weight: $global-weight-bold;
         text-transform: uppercase;
         margin-bottom: $global-padding/2;
     }
