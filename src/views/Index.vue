@@ -93,7 +93,7 @@ export default class Home extends Vue {
 
   private data = Object.assign({}, this.defaultData);
 
-  private handleSubmit(e: any): void {
+  private handleSubmit(e: Event): void {
     this.$validator.validate().then((valid) => {
       if (valid) {
         this.addEntry(this.data);

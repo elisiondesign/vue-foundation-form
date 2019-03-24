@@ -23,11 +23,9 @@ import { User } from '@/types/vuex/users/index';
 
 const namespace: string = 'users';
 
-@Component({
-  components: {},
-})
+@Component
 export default class Overview extends Vue {
-  @State('users') private users: any;
+  @State('users') users!: User[];
 
   @Action('addEntriesFromJSON', { namespace }) private addEntries: any;
 
