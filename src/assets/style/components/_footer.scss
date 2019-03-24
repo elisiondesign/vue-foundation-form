@@ -14,6 +14,15 @@
         padding: 0 $global-padding*5;
     }
 
+    a{
+        color: $white;
+        transition: color 0.2s ease-in-out;
+
+        &:hover{
+            color: $light-blue;
+        }
+    }
+
     &__logo {
         text-transform: uppercase;
         font-weight: $global-weight-bold;  

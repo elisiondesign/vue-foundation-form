@@ -9,5 +9,10 @@
         
     &__link{
         color: $dark-blue;
+        transition: color 0.2s ease-in-out;
+
+        &:hover{
+            color: $dark-gray;
+        }
     }
 }

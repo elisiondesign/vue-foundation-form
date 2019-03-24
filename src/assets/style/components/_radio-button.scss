@@ -4,15 +4,22 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    border-radius: $global-radius;
     padding: 8px 30px;
+    
+    cursor: pointer;
+    border-radius: $global-radius;
+    transition: color 0.3s ease-out;
 
     input{
         display: none;        
     }
 
+    &:hover{
+        color: $light-blue;
+    }
+
     &--selected{
-        color: $white;
+        color: $white!important;
         background-color: $light-blue;
     }
 }
