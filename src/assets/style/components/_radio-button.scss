@@ -1,0 +1,17 @@
+.radio-button{
+    display: inline;
+    color: $dark-gray;
+    font-family: 'Ubuntu Medium', sans-serif;
+    text-transform: uppercase;
+    border-radius: $global-radius;
+    padding: 8px 30px;
+
+    input{
+        display: none;        
+    }
+
+    &--chosen{
+        color: $white;
+        background-color: $light-blue;
+    }
+}

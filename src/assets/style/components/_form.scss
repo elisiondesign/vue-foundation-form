@@ -2,7 +2,7 @@
     padding: $global-padding*2;
     background-color: $white;
     box-shadow: $large-shadow;
-    border-radius: 6px;
+    border-radius: $global-radius;
 
     font-size: $medium-font-size;
 
@@ -17,7 +17,7 @@
         text-transform: uppercase;
         font-size: $medium-font-size;
     }
-
+    
     &__subtitle{
         font-size: $medium-font-size;
     }
@@ -25,10 +25,21 @@
     &__description{
         text-align: center;
         max-width: 260px;
+        margin: $global-padding*2 auto;
+    }
+
+    &__radio {
+        text-align: center;
+        max-width: 260px;
         margin: $global-padding auto;
     }
 
-    &__label {
-        display: inline;
+    &__input{
+        max-width: 370px;
+        margin: $global-padding*2 auto;
+    }
+    
+    &__label{
+        font-family: 'Ubuntu Medium', sans-serif;
     }
 }

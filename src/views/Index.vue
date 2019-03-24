@@ -14,42 +14,48 @@
             Rozšířený label radio buttonu, který může být delší
           </div>
 
-          <label class="form__label">
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              v-model="data.gender"
-            /> Muz
-          </label>
-          <label class="form__label">
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              v-model="data.gender"
-            /> Zena
-          </label>
+          <div class="form__radio">
+            <label class="radio-button radio-button--chosen">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                v-model="data.gender"
+              /> Muž
+            </label>
+            <label class="radio-button">
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                v-model="data.gender"
+              /> Žena
+            </label>
+          </div>
 
-          <label class="form__label">Jméno
-            <input
-              name="firstName"
-              type="text"
-              v-model="data.firstName"
-              v-validate="'required|alpha'"
-            />
-          </label>
-          <label class="form__label">Příjmení
-            <input
-              id="surname"
-              name="surname"
-              type="text"
-              v-model="data.surname"
-              v-validate="'required|alpha'"
-            />
-          </label>
+          <div class="form__input">
+            <label class="form__label">Jméno
+              <input
+                class="line-input"
+                name="firstName"
+                type="text"
+                v-model="data.firstName"
+                v-validate="'required|alpha'"
+              />
+            </label>
+            <label class="form__label">Příjmení
+              <input
+                class="line-input"
+                id="surname"
+                name="surname"
+                type="text"
+                v-model="data.surname"
+                v-validate="'required|alpha'"
+              />
+            </label>
+          </div>
 
-          <button type="submit">Pokračovat</button>
+          <button class="button" type="submit">Pokračovat</button>
 
           <div v-if="errors.has('gender')">Pohlaví je povinná položka</div>
 
@@ -66,6 +72,8 @@
 <style lang="scss">
 @import "src/assets/style/external-libraries/vee-validate";
 @import "src/assets/style/components/form";
+@import "src/assets/style/components/radio-button";
+@import "src/assets/style/components/line-input";
 </style>
 
 <script lang="ts">

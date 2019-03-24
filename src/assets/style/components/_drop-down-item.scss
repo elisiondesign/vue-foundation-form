@@ -3,8 +3,8 @@
     flex-direction: row;
     padding: 3px $global-padding 0 $global-padding;
 
-    background-color: $light-grey;
-    border-bottom: 3px solid $light-grey;
+    background-color: $light-gray;
+    border-bottom: 3px solid $light-gray;
     transition: border-color 0.3s ease-in-out;
     
     @include breakpoint(xxlarge) {
