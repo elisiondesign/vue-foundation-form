@@ -51,8 +51,9 @@
                 />
             </label>
             </div>
-
-            <button class="button" type="submit">Pokračovat</button>
+            <div class="form__submit">
+                <button class="submit" type="submit">Pokračovat</button>
+            </div>
 
             <div v-if="errors.has('gender')">Pohlaví je povinná položka</div>
 
@@ -65,6 +66,7 @@
 @import "src/assets/style/components/form";
 @import "src/assets/style/components/radio-button";
 @import "src/assets/style/components/line-input";
+@import "src/assets/style/components/submit";
 </style>
 
 <script lang="ts">
