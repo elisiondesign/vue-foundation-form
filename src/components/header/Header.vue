@@ -12,13 +12,14 @@
     </wallet>
     <profile class="cell medium-2 header__item">
       <template v-slot:label>
-        Label
       </template>
       <template v-slot:content>
-        Value
+        Jméno Příjmení
       </template>
     </profile>
-    <fa-question-circle class="cell medium-1 header__help"/>
+    <div class="cell medium-1">
+      <fa-question-circle class="header__help"/>
+    </div>
   </header>
 </template>
 

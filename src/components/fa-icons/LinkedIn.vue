@@ -6,7 +6,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   components: {
@@ -14,6 +14,6 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
   },
 })
 export default class Wallet extends Vue {
-  private icon = faLinkedin;
+  private icon = faLinkedinIn;
 }
 </script>
