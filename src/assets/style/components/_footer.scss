@@ -1,24 +1,30 @@
 .footer {
-    display: flex;
-    color: $white;
-    // height: $footer-height;
-    padding: 0 $global-padding*5;
+    position: relative;
+    z-index: 99;
+    height: $footer-height;
+    padding: 0 $global-padding*2;
 
-    &__logo {
-        flex: 20;
+    display: flex;
+    align-items: center;
+
+    color: $white;
+    background-color: $dark-blue;
+
+    @include breakpoint(xxlarge) {
+        padding: 0 $global-padding*5;
     }
 
-    &__lang-switcher {
-        flex: 1;
+    &__logo {
+        text-transform: uppercase;
+        font-weight: $global-weight-bold;  
+        font-size: 31px;
     }
 
     &__social-links {
-        flex: 2;
+        text-align: center;
     }
 
-    &__item {
-        fleX: 1;
+    &__lang-swither {
+        padding-left: $global-padding;
     }
-
-    background-color: $dark-blue;
 }
