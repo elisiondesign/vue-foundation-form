@@ -1,0 +1,17 @@
+.submit{
+    width: 100%;
+    padding: $global-padding;
+    border: $global-radius;
+    outline: none;
+    background: $gradient;
+
+    color: $white;
+    font-family: 'Ubuntu Medium', sans-serif;
+    text-transform: uppercase;
+
+    transition: box-shadow 0.2s ease-in-out;
+    
+    &:hover, &:active{
+        box-shadow: $box-shadow;
+    }
+}

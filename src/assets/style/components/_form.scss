@@ -36,10 +36,16 @@
 
     &__input{
         max-width: 370px;
-        margin: $global-padding*2 auto;
+        margin: $global-padding*3 auto;
     }
     
     &__label{
         font-family: 'Ubuntu Medium', sans-serif;
+    }
+
+    &__submit{
+        width: 100%;
+        max-width: 270px;
+        margin: auto;
     }
 }
