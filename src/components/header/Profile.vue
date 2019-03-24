@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <font-awesome-icon :icon="icon" class="profile__icon"/>
+    <fa-user-alt class="profile__icon"/>
     <div class="profile__text">
       <span>
         <slot name="label" />
@@ -9,6 +9,7 @@
         <slot name="content" />
       </div>
     </div>
+    <fa-chevron-down/>
   </div>
 </template>
 
@@ -18,15 +19,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import faUserAlt from '@/components/fa-icons/UserAlt.vue';
+import faChevronDown from '@/components/fa-icons/ChevronDown.vue';
 
 @Component({
   components: {
-    FontAwesomeIcon,
+    faChevronDown,
+    faUserAlt,
   },
 })
-export default class Wallet extends Vue {
-  private icon = faUserAlt;
-}
+export default class Wallet extends Vue {}
 </script>

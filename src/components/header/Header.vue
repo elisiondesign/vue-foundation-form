@@ -18,9 +18,7 @@
         Value
       </template>
     </profile>
-    <div class="cell medium-1 header__help">
-      <question-mark />
-    </div>
+    <fa-question-circle class="cell medium-1 header__help"/>
   </header>
 </template>
 
@@ -34,14 +32,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import MainMenu from '@/components/header/Menu.vue';
 import Profile from '@/components/header/Profile.vue';
 import Wallet from '@/components/header/Wallet.vue';
-import QuestionMark from '@/components/QuestionMark.vue';
+import faQuestionCircle from '@/components/fa-icons/QuestionCircle.vue';
 
 @Component({
   components: {
     MainMenu,
     Profile,
     Wallet,
-    QuestionMark,
+    faQuestionCircle,
   },
 })
 export default class Header extends Vue {}
