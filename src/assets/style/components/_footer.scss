@@ -25,6 +25,12 @@
     }
 
     &__lang-swither {
+        text-align: right;
         padding-left: $global-padding;
+    }
+
+    &__icon{
+        font-size: 16px;
+        margin: 0 $global-padding/2;
     }
 }
