@@ -30,5 +30,10 @@
         font-size: 44px;
         color: $dark-gray;
         padding-left: $global-padding;
+        
+        &:hover{
+            color: $black;
+            cursor: pointer;
+        }
     }
 }
