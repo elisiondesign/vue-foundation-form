@@ -1,18 +1,35 @@
 <template>
-  <div>
+  <div class="blue-background">
     <app-title>Testovací zadání</app-title>
-    <div class="page">
+    <div class="page vertical-padding">
       <div class="grid-container">
-        <h2>Formular</h2>
+        <span class="form__note">Formulář</span>
         <form
           class="form"
           @submit="handleSubmit"
         >
-          <h3>Formular</h3>
-          <div>
-            Vzorovy button <br>
-            Rozsireny label radio buttonu, ktery muze byt delsi
+          <h2 class="form__title">Formulář</h2>
+          <div class="form__description">
+            <h3 class="form__subtitle">Vzorový radio button</h3>
+            Rozšířený label radio buttonu, který může být delší
           </div>
+
+          <label class="form__label">
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              v-model="data.gender"
+            /> Muz
+          </label>
+          <label class="form__label">
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              v-model="data.gender"
+            /> Zena
+          </label>
 
           <label class="form__label">Jméno
             <input
@@ -30,23 +47,6 @@
               v-model="data.surname"
               v-validate="'required|alpha'"
             />
-          </label>
-
-          <label class="form__label">
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              v-model="data.gender"
-            /> Muz
-          </label>
-          <label class="form__label">
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              v-model="data.gender"
-            /> Zena
           </label>
 
           <button type="submit">Pokračovat</button>

@@ -1,4 +1,33 @@
 .form {
+    padding: $global-padding*2;
+    background-color: $white;
+    box-shadow: $large-shadow;
+    border-radius: 6px;
+
+    font-size: $medium-font-size;
+
+    &__note{
+        display: block;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: $global-padding/2;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-size: $medium-font-size;
+    }
+
+    &__subtitle{
+        font-size: $medium-font-size;
+    }
+
+    &__description{
+        text-align: center;
+        max-width: 260px;
+        margin: $global-padding auto;
+    }
+
     &__label {
         display: inline;
     }

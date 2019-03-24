@@ -7,3 +7,11 @@
 .site-content {
     flex: 1;
 }
+
+.blue-background{
+    background-color: $light-blue;
+}
+
+.vertical-padding{
+    padding: $global-padding*1.5 0;
+}
