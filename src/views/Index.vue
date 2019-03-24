@@ -33,7 +33,7 @@ import UserForm from '@/components/users/Form.vue';
     UserForm,
   },
   metaInfo: {
-    title: 'Users',
+    title: 'Uživatelé',
   },
 })
 export default class Home extends Vue {}
