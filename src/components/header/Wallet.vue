@@ -1,13 +1,13 @@
 <template>
-  <div class="label-value-item">
-    <div class="label-value-item__icon">
-      <font-awesome-icon :icon="wallet" />
+  <div class="wallet">
+    <div class="wallet__icon">
+      <font-awesome-icon :icon="icon" />
     </div>
-    <div class="label-value-item__text">
-      <span class="label-value-item__label">
+    <div class="wallet__text">
+      <span class="wallet__label">
         <slot name="label" />
     </span>
-      <span class="label-value-item__value">
+      <span class="wallet__value">
         <slot
           name="value"
         />
@@ -17,7 +17,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "src/assets/style/components/label-value-item";
+@import "src/assets/style/components/wallet";
 </style>
 
 <script lang="ts">
@@ -31,6 +31,6 @@ import { faWallet } from '@fortawesome/free-solid-svg-icons';
   },
 })
 export default class Wallet extends Vue {
-  private wallet = faWallet;
+  private icon = faWallet;
 }
 </script>

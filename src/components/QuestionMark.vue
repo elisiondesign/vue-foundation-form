@@ -1,5 +1,5 @@
 <template>
-    <font-awesome-icon :icon="mark" />
+    <font-awesome-icon :icon="icon" />
 </template>
 
 
@@ -14,6 +14,6 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
   },
 })
 export default class Wallet extends Vue {
-  private mark = faQuestionCircle;
+  private icon = faQuestionCircle;
 }
 </script>

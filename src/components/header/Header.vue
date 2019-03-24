@@ -10,14 +10,14 @@
         Value itemu
       </template>
     </wallet>
-    <drop-down-item class="cell medium-2 header__item">
+    <profile class="cell medium-2 header__item">
       <template v-slot:label>
         Label
       </template>
       <template v-slot:content>
         Value
       </template>
-    </drop-down-item>
+    </profile>
     <question-mark class="cell medium-1 header__help"/>
   </header>
 </template>
@@ -30,14 +30,14 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import MainMenu from '@/components/header/Menu.vue';
-import DropDownItem from '@/components/header/DropDownItem.vue';
+import Profile from '@/components/header/Profile.vue';
 import Wallet from '@/components/header/Wallet.vue';
 import QuestionMark from '@/components/QuestionMark.vue';
 
 @Component({
   components: {
     MainMenu,
-    DropDownItem,
+    Profile,
     Wallet,
     QuestionMark,
   },
