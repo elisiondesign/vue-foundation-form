@@ -2,14 +2,14 @@
   <header class="grid-x top-bar header">
     <div class="header__logo cell medium-1">logo</div>
     <main-menu class="cell medium-6 header__item" />
-    <label-value-item class="cell medium-2 header__item">
+    <wallet class="cell medium-2 header__item">
       <template v-slot:label>
         Label itemu
       </template>
       <template v-slot:value>
         Value itemu
       </template>
-    </label-value-item>
+    </wallet>
     <drop-down-item class="cell medium-2 header__item">
       <template v-slot:label>
         Label
@@ -18,7 +18,7 @@
         Value
       </template>
     </drop-down-item>
-    <div class="cell medium-1 header__help">?</div>
+    <question-mark class="cell medium-1 header__help"/>
   </header>
 </template>
 
@@ -31,13 +31,15 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MainMenu from '@/components/header/Menu.vue';
 import DropDownItem from '@/components/header/DropDownItem.vue';
-import LabelValueItem from '@/components/header/LabelValueItem.vue';
+import Wallet from '@/components/header/Wallet.vue';
+import QuestionMark from '@/components/QuestionMark.vue';
 
 @Component({
   components: {
     MainMenu,
     DropDownItem,
-    LabelValueItem,
+    Wallet,
+    QuestionMark,
   },
 })
 export default class Header extends Vue {}
