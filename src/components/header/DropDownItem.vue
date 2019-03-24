@@ -1,6 +1,6 @@
 <template>
   <div class="drop-down-item">
-    <div class="drop-down-item__icon">ikona</div>
+    <div class="drop-down-item__icon">U</div>
     <div class="drop-down-item__text">
       <span>
         <slot name="label" />

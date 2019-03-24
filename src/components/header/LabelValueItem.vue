@@ -1,7 +1,7 @@
 <template>
   <div class="label-value-item">
     <div class="label-value-item__icon">
-      wallet
+      w
     </div>
     <div class="label-value-item__text">
       <span class="label-value-item__label"
