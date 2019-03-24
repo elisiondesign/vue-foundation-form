@@ -12,7 +12,7 @@
             </div>
 
             <div class="form__radio">
-            <label class="radio-button radio-button--chosen">
+            <label class="radio-button" :class="{ 'radio-button--selected': isMaleSelected }">
                 <input
                 type="radio"
                 name="gender"
@@ -20,7 +20,7 @@
                 v-model="data.gender"
                 /> Muž
             </label>
-            <label class="radio-button">
+            <label class="radio-button" :class="{ 'radio-button--selected': isFemaleSelected }">
                 <input
                 type="radio"
                 name="gender"
@@ -36,7 +36,7 @@
                 class="line-input"
                 name="firstName"
                 type="text"
-                v-model="data.firstName"
+                v-model="data.name"
                 v-validate="'required|alpha'"
                 />
             </label>
@@ -80,7 +80,7 @@ export default class Home extends Vue {
   @Action('addEntry', { namespace }) private addEntry: any;
 
   private defaultData = {
-    firstName: null,
+    name: null,
     surname: null,
     gender: 'male',
   };
@@ -91,14 +91,23 @@ export default class Home extends Vue {
     this.$validator.validate().then((valid) => {
       if (valid) {
         this.addEntry(this.data);
+        this.clearForm();
       }
     });
 
     e.preventDefault();
   }
 
+  private get isMaleSelected() {
+    return this.data.gender === 'male';
+  }
+
+  private get isFemaleSelected() {
+    return this.data.gender === 'female';
+  }
+
   private clearForm() {
-    Object.assign({}, this.defaultData);
+    this.data = Object.assign({}, this.defaultData);
   }
 }
 </script>
