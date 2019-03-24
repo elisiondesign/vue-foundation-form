@@ -4,5 +4,8 @@
     justify-content: flex-end;
     
     border-right: $hr-border;
-    font-weight: $global-weight-bold;    
+    
+    &__link{
+        color: $dark-blue;
+    }
 }

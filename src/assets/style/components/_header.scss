@@ -1,8 +1,14 @@
 .header {
-    box-shadow: $prototype-box-shadow;
+    box-shadow: $box-shadow;
     padding: 0 $global-padding*2;
 
     @include breakpoint(xxlarge) {
         padding: 0 $global-padding*5;
+    }
+
+    &__logo{
+        text-transform: uppercase;
+        font-size: 31px;
+        font-weight: $global-weight-bold;  
     }
 }
