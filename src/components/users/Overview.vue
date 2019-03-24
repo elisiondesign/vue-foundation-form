@@ -25,7 +25,7 @@ const namespace: string = 'users';
 
 @Component
 export default class Overview extends Vue {
-  @State('users') users!: User[];
+  @State('users') private users!: User[];
 
   @Action('addEntriesFromJSON', { namespace }) private addEntries: any;
 
