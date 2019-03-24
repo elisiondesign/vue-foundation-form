@@ -18,7 +18,9 @@
         Value
       </template>
     </profile>
-    <question-mark class="cell medium-1 header__help"/>
+    <div class="cell medium-1 header__help">
+      <question-mark />
+    </div>
   </header>
 </template>
 
