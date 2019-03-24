@@ -8,6 +8,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VeeValidate, {
   classes: true,
+  events: '',
 });
 
 new Vue({

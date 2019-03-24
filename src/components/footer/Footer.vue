@@ -4,9 +4,15 @@
     <div class="footer__item cell medium-1">Položka</div>
     <div class="footer__item cell medium-1">Položka</div>
     <div class="footer__social-links cell medium-1">
-      <fa-facebook class="footer__icon" />
-      <fa-twitter class="footer__icon" />
-      <fa-linked-in class="footer__icon" />
+      <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+        <fa-facebook class="footer__icon" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+        <fa-twitter class="footer__icon" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+        <fa-linked-in class="footer__icon" />
+      </a>
     </div>
     <div class="footer__lang-swither cell medium-1">EN</div>
   </footer>
